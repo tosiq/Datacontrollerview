@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@{ 
+    var u = ViewBag.a;
+}
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Age</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in u)
+    {
+       <tr>
+           <td>@item.id</td>
+           <td>@item.name</td>
+           <td>@item.password</td>
+           <td>@item.age</td>
+           <td><button class="btn btn-danger">Delete</button>
+           <button class="btn btn-info">Edit</button></td>
+
+       </tr>
+    }
+
+
+
+
+
+
+</table>
+
